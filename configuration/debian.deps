@@ -1,0 +1,15 @@
+#
+# Fichier de dépendences Debian utilisé pour
+# build-package.sh
+#
+libsnmp-perl
+libxml-libxml-perl
+libjson-perl
+libwww-perl
+libxml-xpath-perl
+libnet-telnet-perl
+libnet-ntp-perl
+libnet-dns-perl
+libdbi-perl
+libdbd-mysql-perl
+libdbd-pg-perl

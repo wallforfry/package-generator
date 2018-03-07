@@ -1,0 +1,15 @@
+#
+# Fichier de dépendences CentOS utilisé pour
+# build-package.sh
+#
+perl
+net-snmp-perl
+perl-XML-LibXML
+perl-JSON
+perl-libwww-perl
+perl-XML-XPath
+perl-Net-Telnet
+perl-Net-DNS
+perl-DBI
+perl-DBD-MySQL
+perl-DBD-Pg
