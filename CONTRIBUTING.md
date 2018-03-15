@@ -28,10 +28,6 @@ Les contributions doivent suivre le [code conduite du Gitlab](https://gitlab.com
 
 ## Que dois-je savoir avant de commencer?
 
-### Introduction à Git et Gitlab
-
-Les bases de [Git et Gitlab](https://gitlab.com/linceaerian/package-generator/wikis/Introduction-%C3%A0-Git-&-Gitlab) permettrons d'être plus à l'aise avec la gestion de projet
-
 ## Comment contribuer?
 
 ### Soumettre des bugs
