@@ -71,6 +71,60 @@ L'aide du plugin est disponible tel que:
 scripts/build-package.sh -h
 ```
 
+Usage
+```
+Usage:
+    package-generator/scripts/build-package.sh -o {DEBIAN|RHEL|AIX} -a {32|64} -c {<configuration_file>}-d {<directory_file>}
+Arguments:
+    - a|architecture)	Architecture of the output package (32|64)
+    - o|os)		Destination OS of the package (DEBIAN|RHEL|AIX)
+    - c|config)         Path to a configuration file  
+    - d|directory)      Path to a directory file
+Options:
+    - h|help|\?)	Display this help
+    - D|dependencies)   Path to a dependency file
+    - f|fpm)   		Path to a file with option passed to FPM
+    - b|branch)		A list of branch formatted as 'project:branch1,project2,branch1'
+Informations:
+    This script is used to generate a package from
+    a GIT repository.
+Configuration file:
+    The configuration file is used to import
+    configuration variable.
+    The syntax of a line is:
+    VAR_NAME="VAR_VALUE"
+
+    The following variable are needed by the script:
+	PACKAGE_NAME
+	VENDOR	
+	LICENSE
+	MAINTAINER
+	URL
+	VERSION_DIR
+	CLONE_URL
+   The output can be changed by setting:
+	OUTPUT_DIR
+
+   An example can be found under configuration/build.conf
+Directory file:
+   This file link the source directories with the package
+   output directories, it tell FPM where place your software.
+   
+   The syntax used is SOURCE_DIR=DESTINATION_DIR
+
+   An example can be found under configuration/directory.conf
+Dependency file:
+   This file list the dependencies needed by the generated
+   package, one on each line.
+
+   An example can be found under configuration/debian.deps
+FPM Options file:
+   This file can allow to pass options to FPM during the build.
+   Each option should be one line.
+
+   An example can be found under configuration/fpm.conf
+```
+
 Exemple d'utilisation
 ```
 scripts/build-package.sh -o DEBIAN -a 64 -c configuration/config.ini -d configuration/outputs.ini
